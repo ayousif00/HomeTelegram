@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/ayousif00/bottleplant.svg?branch=master)](https://travis-ci.org/ayousif00/bottleplant) [![Standard - JavaScript Style Guide](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/) [![Coverage Status](https://coveralls.io/repos/github/ayousif00/bottleplant/badge.svg?branch=master)](https://coveralls.io/github/ayousif00/bottleplant?branch=master) [![Stories in Ready](https://badge.waffle.io/ayousif00/bottleplant.png?label=ready&title=Ready)](https://waffle.io/ayousif00/bottleplant)
+[![Build Status](https://travis-ci.org/ayousif00/HomeTelegram.svg?branch=master)](https://travis-ci.org/ayousif00/HomeTelegram) [![Standard - JavaScript Style Guide](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
 
 # HomeTelegram
 A Resin.io powered simple Wifi Scanner with Telegram
