@@ -1,0 +1,29 @@
+{
+  "name": "HomeTelegram",
+  "version": "0.0.1",
+  "description": "A simple Wifi Scanner with Telegram",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/resin-io-projects/simple-server-node.git"
+  },
+  "keywords": [
+    "resin.io",
+    "telegram",
+    "nodejs",
+    "expressjs"
+  ],
+  "author": "Abdulrahman Yousif <mail@abdulous.com>",
+  "license": "Apache License",
+  "bugs": {
+    "url": "https://github.com/resin-io-projects/simple-server-node/issues"
+  },
+  "homepage": "https://github.com/resin-io-projects/simple-server-node#readme",
+  "dependencies": {
+    "express": "*"
+  }
+}
