@@ -1,4 +1,4 @@
-FROM resin/%%RESIN_MACHINE_NAME%%-python:latest
+FROM resin/%%RESIN_MACHINE_NAME%%-python
 
 #install dependencies
 # Make sure we use the init system, in case our container crashes
@@ -9,9 +9,8 @@ ENV INITSYSTEM on
 # Add it on top so apt will pick up packages from there
 RUN wget http://archive.raspberrypi.org/debian/raspberrypi.gpg.key -O - | sudo apt-key add -
 RUN sed -i '1s#^#deb http://archive.raspberrypi.org/debian jessie main\n#' /etc/apt/sources.list
-RUN apt-get update
 
-RUN apt-get install -yq --no-install-recommends \
+RUN apt-get update && apt-get install -yq \
     python-smbus \
     python-dev && \
     apt-get clean && rm -rf /var/lib/apt/lists/*
@@ -28,12 +27,7 @@ RUN apt-get install bluez bluez-firmware
 WORKDIR /usr/src/app
 
 # Import our start script and run script
-COPY 
 COPY scan.sh ./
 
-# Make our script executable
-RUN 
-
 # Start our start script on initialise
-CMD ["./.sh"]
 CMD ["bash", "scan.sh"]
