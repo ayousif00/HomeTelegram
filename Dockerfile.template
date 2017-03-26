@@ -4,7 +4,15 @@ FROM resin/%%RESIN_MACHINE_NAME%%-python
 
 # use apt-get if you need to install dependencies,
 # for instance if you need ALSA sound utils, just uncomment the lines below.
-RUN apt-get update && apt-get install -yq
+RUN apt-get update && apt-get install -y \
+  apt-utils \
+  python-dev \
+  python-pip \
+  python-smbus \
+  git \
+  libdbus-1-dev \
+  libexpat-dev \
+  rfkill && rm -rf /var/lib/apt/lists/*
 
 # Set our working directory
 WORKDIR /usr/src/app
