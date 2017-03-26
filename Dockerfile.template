@@ -2,9 +2,11 @@ FROM resin/%%RESIN_MACHINE_NAME%%-python
 
 # install required packages
 RUN apt-get update && apt-get install -yq --no-install-recommends \
-    bluez \
-    bluez-firmware && \
-    apt-get clean && rm -rf /var/lib/apt/lists/*
+	apt-get clean && rm -rf /var/lib/apt/lists/*
+
+RUN apt-get install libusb-dev
+RUN apt-get install python-pip
+RUN pip install pyusb
 
 # define our working directory in the container
 WORKDIR usr/src/app
@@ -16,4 +18,4 @@ COPY . ./
 ENV INITSYSTEM on
 
 # scan.sh will run when the container starts up on the device
-CMD ["bash", "scan.sh"]
+CMD ["bash", "usb_arm_test.py"]
