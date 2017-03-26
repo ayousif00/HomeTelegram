@@ -4,7 +4,8 @@ FROM resin/%%RESIN_MACHINE_NAME%%-python
 
 # use apt-get if you need to install dependencies,
 # for instance if you need ALSA sound utils, just uncomment the lines below.
-RUN apt-get install libusb
+RUN apt-get update && apt-get install -yq \
+	apt-get install libusb
 
 # Set our working directory
 WORKDIR /usr/src/app
